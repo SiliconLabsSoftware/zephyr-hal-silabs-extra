@@ -1,0 +1,7 @@
+# Copyright (c) 2025 Silicon Laboratories Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+paths:
+  - "License.txt"
+  - util/third_party/crypto_ip/libcryptosoc/*.txt
+  - util/third_party/crypto_ip/libcryptosoc/**/*.[ch]
