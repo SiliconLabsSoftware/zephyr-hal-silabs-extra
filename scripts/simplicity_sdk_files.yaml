@@ -3,5 +3,7 @@
 
 paths:
   - "License.txt"
-  - util/third_party/crypto_ip/libcryptosoc/*.txt
-  - util/third_party/crypto_ip/libcryptosoc/**/*.[ch]
+  - package: security_libcryptosoc
+    prefix: "util/third_party/crypto_ip/libcryptosoc"
+    paths:
+      - "**/*.[ch]"
