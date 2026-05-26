@@ -9,3 +9,13 @@ SPDX-License-Identifier = "LicenseRef-MSLA"
 path = "simplicity_sdk/License.txt"
 SPDX-FileCopyrightText = "Copyright (c) 2025 Silicon Laboratories Inc."
 SPDX-License-Identifier = "LicenseRef-MSLA"
+
+[[annotations]]
+path = [
+    # zephyr-keep-sorted-start
+    ".gitignore",
+    "CMakePresets.json",
+    # zephyr-keep-sorted-stop
+]
+SPDX-License-Identifier = "Apache-2.0"
+SPDX-FileCopyrightText = "Copyright (c) 2026 Silicon Laboratories Inc."

@@ -1,0 +1,51 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 25,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "displayName": "Base config",
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build",
+      "toolchainFile": "cmake/gcc-arm.cmake",
+      "environment": {
+        "SOURCE_DATE_EPOCH": "0",
+        "LC_ALL": "C",
+        "TZ": "UTC"
+      }
+    },
+    {
+      "inherits": ["base"],
+      "name": "cortex-m33",
+      "cacheVariables": {
+        "CPU": "cortex-m33"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "cortex-m33",
+      "configurePreset": "cortex-m33"
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "cortex-m33",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "cortex-m33"
+        },
+        {
+          "type": "build",
+          "name": "cortex-m33"
+        }
+      ]
+    }
+  ]
+}
