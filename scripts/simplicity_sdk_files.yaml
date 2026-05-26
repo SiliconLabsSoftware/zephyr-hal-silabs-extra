@@ -3,7 +3,17 @@
 
 paths:
   - "License.txt"
+  - package: platform_common
+    paths:
+      - "platform/common/inc/sl*_code_classification.h"
   - package: security_libcryptosoc
     prefix: "util/third_party/crypto_ip/libcryptosoc"
     paths:
       - "**/*.[ch]"
+      - "REUSE.toml"
+  - package: security_sxsymcrypt
+    prefix: "util/third_party/crypto_ip/sxsymcrypt"
+    paths:
+      - "include/**/*.[ch]"
+      - "src/*.[ch]"
+      - "REUSE.toml"
