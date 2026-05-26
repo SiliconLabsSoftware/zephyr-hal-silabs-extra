@@ -9,8 +9,3 @@ SPDX-License-Identifier = "LicenseRef-MSLA"
 path = "simplicity_sdk/License.txt"
 SPDX-FileCopyrightText = "Copyright (c) 2025 Silicon Laboratories Inc."
 SPDX-License-Identifier = "LicenseRef-MSLA"
-
-[[annotations]]
-path = "simplicity_sdk/util/third_party/crypto_ip/libcryptosoc/**"
-SPDX-FileCopyrightText = "Copyright (c) 2016-2019 Silex Insight. All Rights reserved"
-SPDX-License-Identifier = "LicenseRef-Secure-IC"
