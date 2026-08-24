@@ -3,7 +3,7 @@
 
 paths:
   - "License.txt"
-  - package: platform_common
+  - package: platform_core
     paths:
       - "platform/common/inc/sl*_code_classification.h"
   - package: security_libcryptosoc
