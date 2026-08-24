@@ -7,7 +7,7 @@ on:
   pull_request:
   push:
     tags:
-      - "v*.*.*"
+      - "sisdk-v*.*.*"
 
 permissions:
   contents: read
@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/embeddedcontainers/zephyr:arm-1.0.0SDK
+      image: ghcr.io/embeddedcontainers/zephyr:arm-1.0.1SDK
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -28,7 +28,7 @@ jobs:
       - name: Build Libraries
         shell: bash
         run: |
-          export PATH=/opt/toolchains/zephyr-sdk-1.0.0/gnu/arm-zephyr-eabi/bin/:$PATH
+          export PATH=/opt/toolchains/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/:$PATH
           cmake --workflow --preset cortex-m33
 
       - name: Upload Artifacts
