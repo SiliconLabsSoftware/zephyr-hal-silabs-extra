@@ -61,6 +61,7 @@ target_include_directories(cryptosoc_xg27 PRIVATE ${libcryptosoc_includes})
 add_library(sxsymcrypt STATIC
   ${sxsymcrypt_path}/src/aead.c
   ${sxsymcrypt_path}/src/blkcipher.c
+  ${sxsymcrypt_path}/src/chachapoly.c
   ${sxsymcrypt_path}/src/channel.c
   ${sxsymcrypt_path}/src/cmac.c
   ${sxsymcrypt_path}/src/cmdma.c
@@ -80,6 +81,8 @@ target_compile_definitions(sxsymcrypt PRIVATE
   SL_CODE_COMPONENT_AES_GCM=aes_gcm
   SL_CODE_COMPONENT_SXSYMCRYPT=sxsymcrypt
   SL_CODE_CLASS_SECURITY=security
+  _SILICON_LABS_DEFEATURE_SHA3
+  SX_KEYREF_MAX_ID=32
 )
 
 target_include_directories(sxsymcrypt PRIVATE
